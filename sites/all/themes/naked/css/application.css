@@ -252,7 +252,10 @@ form {
   display: none;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
   border: solid #ccc 1px;
   padding: 10px;
   display: block;
@@ -293,4 +296,12 @@ label {
 label.error {
   color: red;
   margin-top: 3px;
+}
+
+#user-login {
+  margin: 30px 0;
+}
+
+#user-login .description {
+  display: none;
 }
