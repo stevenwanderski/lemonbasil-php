@@ -1,0 +1,7 @@
+name = Editor menu
+description = "Provides a menu for site editors (not root admins)"
+package = Administration
+core = 7.x
+
+dependencies[] = block
+dependencies[] = nice_menus

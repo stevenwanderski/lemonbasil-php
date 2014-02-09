@@ -1,0 +1,177 @@
+#fixed:before,
+#fixed:after,
+.user-menu > ul:before,
+.user-menu > ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+#fixed:after,
+.user-menu > ul:after {
+    clear: both;
+}
+
+#fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  height: 30px;
+  z-index: 998;
+}
+
+#fixed a {
+  font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif!important;
+  font-size: 11px!important;
+  line-height: 14px!important;
+  text-decoration: none;
+  margin: 0;
+}
+
+#fixed li {
+  list-style: none;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+#fixed ul {
+  margin: 0;
+}
+
+#fixed #block-system-user-menu {
+  float: right;
+}
+
+#fixed .user-menu {
+  float: right;
+  list-style: none;
+  margin-right: 15px;
+}
+
+#fixed .user-menu li {
+  float: left;
+}
+
+#fixed .user-menu a {
+  padding: 0.7em 8px 0.7em 8px;
+  color: #fff;
+  font-size: 11px;
+}
+
+#fixed .user-menu a:hover {
+  text-decoration: none;
+  background: #555;
+}
+
+/* Bartik overrides */
+
+#fixed .content {
+  margin: 0;
+}
+
+
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+body.editor-menu {
+  margin-top: 30px!important;
+}
+
+#fixed #nice-menu-1 {
+  margin-left: 15px;
+}
+
+#nice-menu-1 a:hover {
+  text-decoration: none
+}
+
+.block ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.nice-menu li {
+  float: left; /* LTR */
+  list-style: none;
+}
+
+ul.nice-menu a {
+  padding: 0.7em 8px 0.7em 8px;
+  color: #fff;
+  font-size: 11px;
+}
+
+ul.nice-menu ul {
+  /*top: 2.2em;*/
+  left: -1px; /* LTR */
+  border: 0;
+  margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+  background: #333;
+}
+
+ul.nice-menu > li > a:hover {
+  background: #555;
+}
+
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li li {
+  border-top: solid #444 1px;
+}
+
+ul.nice-menu-down li li:hover {
+  background: #222;
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down ul li a {
+  padding: 0.5em 10px 0.5em 10px;;
+}
+
+ul.nice-menu-down li li.menuparent {
+  background: #444;
+}
+
+ul.nice-menu-down li li.menuparent:hover {
+  background: #222;
+}

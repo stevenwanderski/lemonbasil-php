@@ -1,0 +1,5 @@
+name = Lemon
+description = Custom layout tweaks.
+core = 7.x
+
+files[] = model.class.php

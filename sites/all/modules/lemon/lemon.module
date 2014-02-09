@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function lemon_theme($existing, $type, $theme, $path) {
+  return array(
+    'home' => array('template' => 'home')
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function lemon_menu() {
+  $items['home'] = array(
+    'title' => 'Personal Chef',
+    'page callback' => 'lemon_home_callback',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * Page callback: home
+ */
+function lemon_home_callback(){
+  return theme('home', array());
+}
+
+?>

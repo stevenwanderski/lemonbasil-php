@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function editor_menu_init(){
+  $menus = menu_get_menus();
+  if(!array_key_exists('editor-menu', $menus)){
+    $editor_menu = array(
+      'menu_name' => 'editor-menu',
+      'title' => 'Editor menu',
+      'description' => 'Custom menu for site editors.'
+    );
+    menu_save($editor_menu);
+  }
+}
+
+/**
+ * Implements hook_page_build().
+ */
+function editor_menu_page_build(&$page){
+  global $user;
+  if (!in_array('editor', $user->roles)) return;
+
+  $path = drupal_get_path('module', 'editor_menu');
+  drupal_add_js($path . '/js/editor_menu.js');
+
+  $editor_block = module_invoke('nice_menus', 'block_view', '1');
+  $user_block = module_invoke('system', 'block_view', 'user-menu');
+  $markup = '<div id="fixed">';
+  $markup .= render($editor_block['content']);
+  $markup .= editor_menu_user_links();
+  $markup .= '</div>';
+  $page['page_bottom']['editor_menu']['#markup'] = $markup;
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function editor_menu_preprocess_html(&$variables) {
+  if(!empty($variables['page']['page_bottom']['editor_menu'])){
+    $variables['classes_array'][] = "editor-menu";
+  }
+}
+
+/**
+ * Returns the markup for the user links.
+ */
+function editor_menu_user_links(){
+  global $user;
+  $markup = '<div class="user-menu">';
+  $markup .= '<ul>';
+  $markup .= '<li><a href="/user/' . $user->uid . '/edit">Hey, ' . $user->name . '</a></li>';
+  $markup .= '<li><a href="/user/logout">Logout</a></li>';
+  $markup .= '</ul>';
+  return $markup;
+}
+
+?>
