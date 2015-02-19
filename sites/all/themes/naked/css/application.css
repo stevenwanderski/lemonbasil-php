@@ -52,7 +52,7 @@ h1 {
 
 h2 {
   font-size: 40px;
-  text-align: center;
+  font-weight: 100;
 }
 
 p {
@@ -128,18 +128,9 @@ nav a {
   float: left;
 }
 
-.coming-soon,
-.page-node-4 .body {
-  text-align: center;
-}
-
 .page-node-4 .body img {
   float: none;
   margin: 0;
-}
-
-.coming-soon p {
-  font-size: 20px;
 }
 
 .hero {
