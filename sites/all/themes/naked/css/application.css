@@ -308,6 +308,11 @@ label.error {
   text-decoration: underline;
 }
 
+.menus-container aside a {
+  display: block;
+  padding-bottom: 4px;
+}
+
 .menus-container .content {
   width: 750px;
   display: inline-block;
