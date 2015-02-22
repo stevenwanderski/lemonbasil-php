@@ -5,7 +5,8 @@
  */
 function lemon_theme($existing, $type, $theme, $path) {
   return array(
-    'home' => array('template' => 'home')
+    'home' => array('template' => 'home'),
+    'menus' => array('template' => 'menus')
   );
 }
 
@@ -18,6 +19,12 @@ function lemon_menu() {
     'page callback' => 'lemon_home_callback',
     'access arguments' => array('access content'),
   );
+
+  $items['menus'] = array(
+    'title' => 'Menus',
+    'page callback' => 'lemon_menus_callback',
+    'access arguments' => array('access content'),
+  );
   return $items;
 }
 
@@ -26,6 +33,15 @@ function lemon_menu() {
  */
 function lemon_home_callback(){
   return theme('home', array());
+}
+
+/**
+ * Page callback: home
+ */
+function lemon_menus_callback(){
+  $categories = views_get_view_result('menu_categories', 'block');
+  $menu_items = views_get_view_result('menu_items', 'page_1');
+  return theme('menus', array('categories' => $categories, 'menu_items' => $menu_items));
 }
 
 ?>

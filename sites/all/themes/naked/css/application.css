@@ -296,3 +296,26 @@ label.error {
 #user-login .description {
   display: none;
 }
+
+.menus-container aside {
+  width: 240px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 40px;
+}
+
+.menus-container aside .active {
+  text-decoration: underline;
+}
+
+.menus-container .content {
+  width: 750px;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 40px;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+

@@ -8,7 +8,7 @@
     </div>
 
     <nav class="right">
-      <a href="/how-it-works">How it Works</a> <a href="/about">About the Chef</a> <a href="/view-menus">View Menus</a> <a class="btn" href="/contact">Contact</a>
+      <a href="/how-it-works">How it Works</a> <a href="/about">About the Chef</a> <a href="/menus">View Menus</a> <a class="btn" href="/contact">Contact</a>
     </nav>
   </div>
 </header>
