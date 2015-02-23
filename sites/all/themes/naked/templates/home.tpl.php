@@ -4,8 +4,6 @@
     <div class="hero">
       <h1>Tasty Eats for Hungry Hearts</h1>
       <p>You pick a plan. I cook and clean. Dinner is ready.</p>
-      <!-- <h1>Tasty Eats for Hungry Hearts</h1>
-      <p>Simplified. Customized. Food.</p> -->
     </div>
 
     <div class="col col-works">
@@ -15,7 +13,7 @@
 
     <div class="col col-chef col-middle">
       <div class="image"><img src="/sites/all/themes/naked/images/circle_bird.png" alt=""></div>
-      <a href="/about" class="btn">About the chef</a>
+      <a href="/about" class="btn">About me</a>
     </div>
 
     <div class="col col-menu">
