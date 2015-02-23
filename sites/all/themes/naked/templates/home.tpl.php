@@ -2,8 +2,10 @@
   <div class="inner cf">
 
     <div class="hero">
-      <h1>Healthy Meals for your Family</h1>
-      <p>Prepared in your home &amp; customized to your taste</p>
+      <h1>Tasty Eats for Hungry Hearts</h1>
+      <p>You pick a plan. I cook and clean. Dinner is ready.</p>
+      <!-- <h1>Tasty Eats for Hungry Hearts</h1>
+      <p>Simplified. Customized. Food.</p> -->
     </div>
 
     <div class="col col-works">
@@ -26,7 +28,7 @@
 
 <div class="quote">
   <div class="inner cf">
-    <q>People who love to eat are always the best people.</q>
-    <p>- Julia Child -</p>
+    <q>People who give you their food give you their heart.</q>
+    <p>- Cesar Chavez -</p>
   </div>
 </div>
